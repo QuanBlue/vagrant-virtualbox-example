@@ -59,12 +59,15 @@ mkdir vagrant_ex
    config.vm.provision :shell, path: "bootstrap.sh"
    ```
 
-   -  Config network connection
+   -  Config network connection with `192.168.1.20` is my ip network
 
    ```ruby
    config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
-   config.vm.network "public_network", ip: "192.168.0.108"
+   config.vm.network "public_network", ip: "192.168.1.20"
+
    ```
+
+   -  Choose interface for network brigde to
 
    -  Run command line on new created virtual machine
 

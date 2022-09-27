@@ -29,7 +29,7 @@ Vagrant.configure(2) do |config|
 
     config.vm.provision :shell, path: "bootstrap.sh"
     config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
-    config.vm.network "public_network", ip: "192.168.0.108"
+    config.vm.network "public_network", ip: "192.168.1.20"
 
     config.vm.provision "shell", inline: <<-SHELL
       export DEBIAN_FRONTEND=noninteractive
